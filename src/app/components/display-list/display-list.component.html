@@ -1,0 +1,23 @@
+<section class="active-list-items">
+    <div class="active-list">
+        <div class="active-list-container">
+            <div class="list-header">
+                <h5 class="list heading">Shopping List:</h5>
+            </div> 
+            <div class="list-body">
+                <div class="listBodyInner" *ngFor="let listBodyInner of displaylist; let i = index; ">
+                    <div class="active-details">
+                        <p class="activename">{{ listBodyInner.name }}</p>
+                    </div>
+                    <div class="active-price">
+                        <span class="activeprice">{{ listBodyInner.price }}</span>
+                    </div>
+                    <div class="active-store">
+                        <p class="activestore">{{ listBodyInner.store }}</p>
+                    </div>
+                    <button type="button" class="btn-remove" (click)="removeItem(i)">Remove</button>
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,8 @@
+<section class="searchbox">
+    <div class="searchbox-product">
+        <form class="search-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+            <input class="searh-input"  name="search" type="text" ngModel placeholder="Search for product to compare">
+            <button type="submit" class="btn-search">Search</button>
+        </form>
+    </div>
+</section>

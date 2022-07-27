@@ -1,0 +1,83 @@
+
+
+.compute__item-list{
+    margin: 2.5px;
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    
+}
+
+.store__listing-list{
+    margin-bottom: -5em;
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
+}
+
+.listing-list{
+    min-width: 80px;
+    min-height: 30px;
+    width: 80;
+    height: 40px;
+    background-color: gold;
+    box-shadow: var(--bs);
+    border: 1px solid transparent;
+    transition: border 0.5s;
+    transition: transform 100ms ease-in-out;
+}
+.listing-list:hover{
+    border: 1px solid var(--clr-dark);
+    transform: scale(1.1);
+}
+
+h5{
+    font-size: 13.5px;
+    font-weight: 425;
+    color: var(--clr-dark);
+}
+
+input[type=text]{
+    min-width: 45%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box; 
+      
+}
+
+input[type=text]:hover{
+    border-color: dodgerblue;
+    box-shadow: 0 0 8px 0 dodgerblue;
+}
+
+.btn-listSearch{
+    border: 2pxsolid #aaa;
+    border-radius: 4px;
+    margin: 8px;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    font-family: var(--ff-primary);
+    transition: border-color .5s;
+}
+
+.btn-listSearch:hover{
+    border-color: dodgerblue;
+    box-shadow: 0 0 8px 0 dodgerblue; 
+    background-color: #fff;
+    
+}
+
+.btn-listSearch{
+    margin-left: 0.1em;
+}

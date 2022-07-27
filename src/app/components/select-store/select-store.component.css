@@ -1,0 +1,55 @@
+.store{
+    margin-bottom: 2.5em;
+    margin-top: 0;
+}
+
+.store-list{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em; 
+     
+}
+
+.store-select-wool, .store-select-pick,
+.store-select-check{
+    color: var(--clr-light);
+}
+
+@media(min-width: 800px){
+
+    .store-select-wool, .store-select-pick,
+    .store-select-check{
+    margin: .25em;
+    min-width: 15%;
+    width: 18%;
+    border: 2px;
+    padding: 20px;
+    overflow: hidden;
+    transition: transform 200ms ease-in-out;
+    font-weight: var(--fw-bold);  
+    } 
+}
+
+.store-select-wool{
+    background-color: black;
+}
+.store-select-pick{
+    background-color: firebrick;
+}
+.store-select-check{
+    background-color:goldenrod ;
+}
+.store-select-wool:hover{
+    transform: scale(1.1);
+}
+.store-select-pick:hover{
+    transform:scale(1.1)
+}
+.store-select-check:hover{
+    transform:scale(1.1)
+}
+
+
+
+
+

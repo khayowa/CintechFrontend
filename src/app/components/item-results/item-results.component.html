@@ -1,0 +1,20 @@
+<section class="search-results">
+    <div class="search-item-results">
+        <ng-container *ngFor="let itemContainer of listProducts">
+        <div class="itemContainer" >
+            <div class="item-details">
+                <a class="itemname" #name href="*LINK*LINK*LINK" >Name <!--{{itemContainer.name}}--></a>
+            </div>
+            <div class="item-price">
+                <span class="itemprice" #price >Price <!--{{itemContainer.price}}--></span>
+            </div>
+            <div class="item-store">
+                <a class="itemstore" #store href="*LINK*LINK*LINK" >Store <!--{{itemContainer.store}}--></a>
+            </div>
+            <button type="button" class="btn-add" (click)="transferData(name, price, store)" (click)="addToList()">Add</button>
+        </div>
+        </ng-container>
+    </div>
+</section>
+
+<app-display-list [prodName]="prodName" [prodPrice]="prodPrice" [prodStore]="prodStore"></app-display-list>

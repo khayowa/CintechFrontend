@@ -1,0 +1,126 @@
+.search-results{
+    margin-top: 6.2em;
+    padding-bottom: 30px;
+    
+}
+
+@media(min-width: 1230px){
+    .search-item-results{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        
+    }
+
+    .itemContainer{
+        display: flex;
+        justify-content: center;
+        justify-content: space-evenly;
+        overflow-wrap: break-word ;
+        border: 1px solid grey;
+        width: 50%;
+        min-width: 50%;
+        padding: 5px ;
+        border-radius: 6px;
+        box-shadow: 0 1.2px 0 1.2px lightgrey ;
+        /*position: relative;*/
+        
+    }
+
+    .item-details{
+        margin-left: 1.5em;
+        position: absolute;
+        left: 2.5em;
+    }
+    
+    .item-price{
+        margin-left: 20em;
+        position: absolute;
+    }
+    
+    .item-store{
+        margin-left: 31.5em;
+        position: absolute;
+    }
+    
+    .btn-add{
+        margin-right: -600px;
+        position: absolute;
+    }
+
+
+}
+
+
+.itemContainer{
+    border: 1px solid grey;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px ;
+    height: 31px;
+    border-radius: 6px;
+    box-shadow: 0 1.2px 0 1.2px lightgrey ;
+    position: relative;
+    
+
+/*    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    overflow-wrap: break-word ;
+    border: 1px solid grey;
+    width: 50%;
+    min-width: 50%;
+    padding: 5px ;
+    border-radius: 6px;
+    box-shadow: 0 1.2px 0 1.2px lightgrey ;
+    position: relative;
+*/
+}
+
+/*.search-item-results{
+    display: flex;
+    justify-content: center;
+    
+}*/
+
+.btn-add{
+    margin-left: 0;
+    font-size: small;
+    border: 1px solid transparent;
+    background-color: gold;
+    text-decoration-color: var(--clr-dark);
+    box-shadow: var(--bs);
+    transition: transform 100ms ease-in-out;
+    transition: boder 0.5s;
+}
+.btn-add:hover{
+    border: 0.5px solid black;
+    transform: scale(1.1);
+}
+
+/*
+.item-details{
+    margin-left: 1.5em;
+    position: absolute;
+    left: 2.5em;
+}
+
+.item-price{
+    margin-left: 15em;
+    position: absolute;
+}
+
+.item-store{
+    margin-left: 27.5em;
+    position: absolute;
+}
+
+.btn-add{
+    margin-left: 43.5em;
+ }
+
+
+ button{
+    margin-left: 0em;
+ }
+ */

@@ -1,0 +1,17 @@
+
+
+<div class="compute__item-list">
+    <div class="item__listing-list">
+        <button class="listing-list"><a href="#makelist"></a>
+            <h5>Make List</h5>
+        </button>
+    </div> 
+</div>
+<div class="store__listing-list">
+    <!---<template>-->
+    <form class="searchbox-product" #form="ngForm" (ngSubmit)="onMakeList(form)" id="makelist">
+            <input type="text"  name="listSearch" ngModel placeholder="Search for list product to add">
+            <button type="submit" class="btn-listSearch" >Search</button>     
+    </form>
+</div>
+

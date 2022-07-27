@@ -1,0 +1,48 @@
+/*In relation to title area format and styling*/
+input[type=text]{
+    min-width: 45%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box; 
+      
+}
+
+input[type=text]:hover{
+    border-color: dodgerblue;
+    box-shadow: 0 0 8px 0 dodgerblue;
+}
+
+.btn-search{
+    border: 2pxsolid #aaa;
+    border-radius: 4px;
+    margin: 8px;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    font-family: var(--ff-primary);
+    transition: border-color .5s;
+}
+
+.btn-search:hover{
+    border-color: dodgerblue;
+    box-shadow: 0 0 8px 0 dodgerblue; 
+    background-color: #fff;
+    
+}
+
+/*In relation to the search box area*/
+
+form{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4em;
+}
+ .btn-search{
+    margin-left: 0.1em;
+ }
