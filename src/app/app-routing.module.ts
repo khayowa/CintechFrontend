@@ -6,22 +6,29 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
 
   {
-    path: 'selectStore',
-    component: DisplayProductsComponent,
+    path: '',
+    component: DisplayProductsComponent, outlet: 'outputDisplay'
+  },
+  {
+    path: 'selectWool/:product-woolStore',
+    component: DisplayProductsComponent, outlet: 'outputDisplay'
+  },
+  {
+    path: 'selectPnP/:product-pnpStore',
+    component: DisplayProductsComponent, outlet: 'outputDisplay'
   },
   {
     path: 'search/:product-search',
-    component: DisplayProductsComponent,
+    component: DisplayProductsComponent, outlet: 'outputDisplay'
   },
   {
-    path: 'filterByProduct',
-    component: DisplayProductsComponent,
+    path: 'filterByProduct/:product-filterBy',
+    component: DisplayProductsComponent, outlet: 'outputDisplay'
   },
   {
-    path: 'listSearch/:product-listSearch',
+    path: 'titleSearch/:product-titleSearch',
     component: ItemResultsComponent,
   }
-
 
 ];
 

@@ -10,15 +10,13 @@
      
 }
 
-.store-select-wool, .store-select-pick,
-.store-select-check{
+.store-select-wool, .store-select-pick{
     color: var(--clr-light);
 }
 
 @media(min-width: 800px){
 
-    .store-select-wool, .store-select-pick,
-    .store-select-check{
+    .store-select-wool, .store-select-pick{
     margin: .25em;
     min-width: 15%;
     width: 18%;
@@ -36,18 +34,15 @@
 .store-select-pick{
     background-color: firebrick;
 }
-.store-select-check{
-    background-color:goldenrod ;
-}
+
+
 .store-select-wool:hover{
     transform: scale(1.1);
 }
 .store-select-pick:hover{
     transform:scale(1.1)
 }
-.store-select-check:hover{
-    transform:scale(1.1)
-}
+
 
 
 

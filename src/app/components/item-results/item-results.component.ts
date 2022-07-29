@@ -17,10 +17,11 @@ export class ItemResultsComponent implements OnInit {
   @ViewChild(DisplayListComponent) view! : DisplayListComponent
 
   public listProducts!: Array<Product>;
+  itemProducts : any = [];
 
-  prodName = 'Albany white bread';
-  prodPrice = 'R 15.99';
-  prodStore = 'Pick n Pay'
+  prodName!:any;
+  prodPrice!:any; 
+  prodStore!:any;
 
   transferData(name: any, price: any, store: any){
     this.prodName = name
@@ -32,8 +33,8 @@ export class ItemResultsComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params: Params) => {
-      if (params['product-listSearch']){
-        this.searchProducts(params['product-listSearch']);
+      if (params['product-titleSearch']){
+        this.searchItems(params['product-titleSearch']);
       }
     });
 
@@ -43,11 +44,11 @@ export class ItemResultsComponent implements OnInit {
     this.addToListService.sendClickEvent();
   }
 
-  searchProducts(search?: string){
-    this.httpService.getItemList(search).subscribe((prodList: APIResponse<Product>) => {
-      this.listProducts = prodList.results;
-      console.log(prodList);
+  searchItems(search?: string){
+    this.httpService.getByTitle(search).subscribe(data => {
+      this.itemProducts = data;
     })
   }
+
 
 }

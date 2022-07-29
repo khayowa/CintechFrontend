@@ -30,7 +30,8 @@
     }
     
     .product-item-price{
-        margin-right: -19.5em;
+        margin-left: 40.5em;
+        position: absolute;
     }
 
 
@@ -81,10 +82,13 @@
     margin: 4.5px;
     border-radius: 6px;
     box-shadow: 0 1.2px 0 1.2px lightgrey ;
+    position: relative;
 }
-
+ 
 .product-store, .product-price,  .product-name{
     text-overflow: ellipsis;
     overflow: hidden;
+    text-decoration: none;
+    color: black;
 }
 

@@ -4,6 +4,12 @@
     
 }
 
+.search-item-results{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @media(min-width: 1230px){
     .search-item-results{
         display: flex;
@@ -51,12 +57,18 @@
 
 }
 
+.itemname{
+    text-decoration: none;
+    color: black;
+}
+
 
 .itemContainer{
     border: 1px solid grey;
     display: flex;
     justify-content: space-around;
     padding: 5px ;
+    margin: 2.5px;
     height: 31px;
     border-radius: 6px;
     box-shadow: 0 1.2px 0 1.2px lightgrey ;

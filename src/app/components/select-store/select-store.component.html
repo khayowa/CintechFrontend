@@ -1,16 +1,11 @@
 <section class="store">
     <div class="store-list" [(ngModel)]="store">
-        <button  class="store-select store-select-wool" >
+        <button [routerLink]="[{outlets:{outputDisplay:['selectWool']}}]" class="store-select store-select-wool" (click)="selectWool()" >
             WOOLWORTHS
         </button>
 
-        <button class="store-select store-select-pick" >
+        <button [routerLink]="[{outlets:{outputDisplay:['selectPnP']}}]" class="store-select store-select-pick" (click)="selectPick()" >
             PICK n PAY
         </button>
-
-        <button class="store-select store-select-check" >
-            SHOPRITE
-        </button>
-
     </div>
 </section>

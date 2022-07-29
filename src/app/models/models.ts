@@ -1,9 +1,21 @@
+
 export interface Product{
-    id: number;
-    prodTitle: string;
-    price: number;
-    store: string;
-    url: string;
+
+    product:{
+        id: number;
+        prodVolume: number;
+        prodVolumeUnit: string;
+        prodTitle: string;
+    }
+    pickNPay:{
+        price: number;
+        url: string;
+    }
+    woolworths:{
+        price: number;
+        url: string;
+    }
+    
 }
 
 export interface APIResponse<T>{

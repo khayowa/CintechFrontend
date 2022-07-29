@@ -1,18 +1,30 @@
 <section class="search-results">
     <div class="search-item-results">
-        <ng-container *ngFor="let itemContainer of listProducts">
-        <div class="itemContainer" >
-            <div class="item-details">
-                <a class="itemname" #name href="*LINK*LINK*LINK" >Name <!--{{itemContainer.name}}--></a>
+        <ng-container *ngFor="let itemContainer of itemProducts">
+            <div class="itemContainer" >
+                <div class="item-details">
+                    <a class="itemname" #nameP href="#" >{{itemContainer.product.prodTitle}}</a>
+                </div>
+                <div class="item-price">
+                    <span class="itemprice" #priceP >R {{itemContainer.pickNPay.price}}</span>
+                </div>
+                <div class="item-store">
+                    <a class="itemstore" #storeP href="{{itemContainer.pickNPay.url}}" >Pick n Pay</a>
+                </div>
+                <button type="button" class="btn-add" (click)="transferData(nameP, priceP, storeP)" (click)="addToList()">Add</button>
             </div>
-            <div class="item-price">
-                <span class="itemprice" #price >Price <!--{{itemContainer.price}}--></span>
+            <div class="itemContainer" >
+                <div class="item-details">
+                    <a class="itemname" #nameW href="#" >{{itemContainer.product.prodTitle}}</a>
+                </div>
+                <div class="item-price">
+                    <span class="itemprice" #priceW >R {{itemContainer.woolworths.price}}</span>
+                </div>
+                <div class="item-store">
+                    <a class="itemstore" #storeW href="{{itemContainer.woolworths.url}}" >Woolworths</a>
+                </div>
+                <button type="button" class="btn-add" (click)="transferData(nameW, priceW, storeW)" (click)="addToList()">Add</button>
             </div>
-            <div class="item-store">
-                <a class="itemstore" #store href="*LINK*LINK*LINK" >Store <!--{{itemContainer.store}}--></a>
-            </div>
-            <button type="button" class="btn-add" (click)="transferData(name, price, store)" (click)="addToList()">Add</button>
-        </div>
         </ng-container>
     </div>
 </section>

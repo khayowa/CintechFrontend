@@ -7,10 +7,13 @@ import { Observable, Subject } from 'rxjs';
 export class AddToListService {
 
   private subject = new Subject<any>();
+  
 
   sendClickEvent(){
     this.subject.next;
-  } 
+  }
+  
+  
 
   
   getClickEvent():Observable<any>{

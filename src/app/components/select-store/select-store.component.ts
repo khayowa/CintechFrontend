@@ -15,6 +15,13 @@ export class SelectStoreComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
+  selectWool(){
+    this.router.navigate(['selectWool'])
+  }
 
+  selectPick(){
+    this.router.navigate(['selectPnP'])
+  }
+
+  
 }

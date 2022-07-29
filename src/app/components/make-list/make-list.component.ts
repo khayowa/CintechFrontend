@@ -15,7 +15,7 @@ export class MakeListComponent implements OnInit {
   }
 
   onMakeList(form: NgForm ){
-    this.router.navigate(['listSearch', form.value.listSearch])
+    this.router.navigate(['titleSearch', form.value.titleSearch])
   }
 
 

@@ -1,8 +1,8 @@
 <section class="searchbox">
-    <div class="searchbox-product">
+    <div class="searchbox-product" [routerLink]="['',{outlets:{outputDisplay:['search']}}]">
         <form class="search-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
-            <input class="searh-input"  name="search" type="text" ngModel placeholder="Search for product to compare">
-            <button type="submit" class="btn-search">Search</button>
+            <input  class="searh-input"  name="search" type="text" ngModel placeholder="Search for product to compare">
+            <button [routerLink]="['',{outlets:{outputDisplay:['search']}}]" type="submit" class="btn-search">Search</button>
         </form>
     </div>
 </section>
