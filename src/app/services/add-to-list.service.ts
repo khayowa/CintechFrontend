@@ -10,15 +10,12 @@ export class AddToListService {
   
 
   sendClickEvent(){
-    this.subject.next;
+    this.subject.next('');
   }
-  
-  
-
   
   getClickEvent():Observable<any>{
     return this.subject.asObservable();
   }
 
-  constructor() { }
+
 }

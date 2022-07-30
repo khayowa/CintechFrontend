@@ -36,6 +36,18 @@ export class HttpService {
     });
   }
 
+  getByFilter(directive: string,product?: string){
+    let params = new HttpParams();
+
+    if(product){
+      params = new HttpParams().set( directive, product)
+    }
+
+    return this.http.get(env.SEARCH_URL+product, {
+      params:params
+    });
+  }
+
   getByTitle(titleSearch?: string){
     let params = new HttpParams();
 

@@ -7,7 +7,7 @@
             <div class="product-store-heading"><h3 class="stroe">Store</h3></div>
         </div>
         <ng-container *ngFor="let productsContainer of prodData ">
-        <div class="productsContainer" >
+        <div class="productsContainer" *ngIf="productsContainer.pickNPay !null">
             <div class="product-item-details">
                 <a class="product-name" href="{{productsContainer.pickNPay.url}}" >{{productsContainer.product.prodTitle}}</a>
             </div>
@@ -18,7 +18,7 @@
                 <a class="product-store" href="{{productsContainer.pickNPay.url}}" >Pick n Pay </a>
             </div>
         </div>
-        <div class="productsContainer" >
+        <div class="productsContainer" *ngIf="productsContainer.woolworths !null">
             <div class="product-item-details">
                 <a class="product-name" href="{{productsContainer.woolworths.url}}" >{{productsContainer.product.prodTitle}}</a>
             </div>

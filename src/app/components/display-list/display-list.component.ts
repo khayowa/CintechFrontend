@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AddToListService } from 'src/app/services/add-to-list.service';
 import { displayList } from 'src/app/models/displayList';
@@ -13,10 +13,16 @@ import { NgModel } from '@angular/forms';
 export class DisplayListComponent implements OnInit {
   clickEventSubscription!: Subscription;
   displaylist!: displayList[];
+
+  //pName! : any;
+  //pPrice! : any;
+  //pStore! : any;
   
-  @Input() prodName! : string;
-  @Input() prodPrice! : string;
-  @Input() prodStore! : string;
+  @Input() prodName! : any;
+  @Input() prodPrice! : any;
+  @Input() prodStore! : any;
+
+  
 
   constructor(private addToListService: AddToListService) {
     this.clickEventSubscription = this.addToListService.getClickEvent().subscribe(() => {
@@ -24,7 +30,12 @@ export class DisplayListComponent implements OnInit {
     })
   }
 
+
   ngOnInit(): void {
+  /*  this.clickEventSubscription = this.addToListService.getClickEvent().subscribe(() => {
+      this.appendListItem();
+    }) */
+
     this.displaylist = [
       { 
         name: 'Jungle Oats 200g',
@@ -37,6 +48,7 @@ export class DisplayListComponent implements OnInit {
         store: 'Pick n Pay'
       }
     ]
+
   }
 
   removeItem(id:number){
@@ -49,5 +61,7 @@ export class DisplayListComponent implements OnInit {
       price : this.prodPrice,
       store : this.prodStore
     })
+
+    console.log('function call from another component works ');
   }
 }

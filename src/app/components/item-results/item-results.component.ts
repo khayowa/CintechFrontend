@@ -27,6 +27,8 @@ export class ItemResultsComponent implements OnInit {
     this.prodName = name
     this.prodPrice = price
     this.prodStore = store
+
+   // console.log(name, price, store);
   }
 
   constructor(private addToListService: AddToListService, private httpService: HttpService, private activatedRoute: ActivatedRoute) { }
@@ -42,6 +44,7 @@ export class ItemResultsComponent implements OnInit {
 
   addToList(){
     this.addToListService.sendClickEvent();
+    alert('Add button clicked')
   }
 
   searchItems(search?: string){

@@ -22,7 +22,23 @@ const routes: Routes = [
     component: DisplayProductsComponent, outlet: 'outputDisplay'
   },
   {
-    path: 'filterByProduct/:product-filterBy',
+    path: 'filterByOil/:oilFilter',
+    component: DisplayProductsComponent, outlet: 'outputDisplay'
+  },
+  {
+    path: 'filterByCoffee/:coffeeFilter',
+    component: DisplayProductsComponent, outlet: 'outputDisplay'
+  },
+  {
+    path: 'filterByMaize/:maizeFilter',
+    component: DisplayProductsComponent, outlet: 'outputDisplay'
+  },
+  {
+    path: 'filterByEggs/:eggFilter',
+    component: DisplayProductsComponent, outlet: 'outputDisplay'
+  },
+  {
+    path: 'filterByMilk/:milkFilter',
     component: DisplayProductsComponent, outlet: 'outputDisplay'
   },
   {

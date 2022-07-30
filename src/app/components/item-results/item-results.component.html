@@ -11,7 +11,7 @@
                 <div class="item-store">
                     <a class="itemstore" #storeP href="{{itemContainer.pickNPay.url}}" >Pick n Pay</a>
                 </div>
-                <button type="button" class="btn-add" (click)="transferData(nameP, priceP, storeP)" (click)="addToList()">Add</button>
+                <button type="button" class="btn-add" (click)="transferData(nameP.innerHTML, priceP.innerHTML, storeP.innerHTML)" (click)="addToList()">Add</button>
             </div>
             <div class="itemContainer" >
                 <div class="item-details">
@@ -23,7 +23,7 @@
                 <div class="item-store">
                     <a class="itemstore" #storeW href="{{itemContainer.woolworths.url}}" >Woolworths</a>
                 </div>
-                <button type="button" class="btn-add" (click)="transferData(nameW, priceW, storeW)" (click)="addToList()">Add</button>
+                <button type="button" class="btn-add" (click)="transferData(nameW.innerHTML, priceW.innerHTML, storeW.innerHTML)"   (click)="addToList()">Add</button>
             </div>
         </ng-container>
     </div>

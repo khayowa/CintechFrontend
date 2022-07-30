@@ -35,12 +35,33 @@ export class DisplayProductsComponent implements OnInit {
       else if(params['product-woolStore']){
         this.storeWoolies();
       }
+      else if(params['oilFilter']){
+        this.filterProduct('filterByOil','oil');
+      }
+      else if(params['coffeeFilter']){
+        this.filterProduct('filterByCoffee','coffee');
+      }
+      else if(params['maizeFilter']){
+        this.filterProduct('filterByMaize','maize');
+      }
+      else if(params['eggFilter']){
+        this.filterProduct('filterByEggs','eggs');
+      }
+      else if(params['milkFilter']){
+        this.filterProduct('filterByMilk','milk');
+      }
       else{
         this.httpService.getRandom().subscribe(data => {
           this.prodData = data;
         })
       }
     });
+  }
+
+  filterProduct(directive: string,product?: string){
+    this.httpService.getByFilter(directive,product).subscribe(data => {
+      this.prodData = data;
+    })
   }
 
   storeWoolies(){
