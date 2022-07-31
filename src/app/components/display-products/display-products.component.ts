@@ -48,7 +48,7 @@ export class DisplayProductsComponent implements OnInit {
       else if(params['maizeFilter']){
         this.filterProduct('filterByMaize','maize');
       }
-      else if(params['eggFilter']){
+      else if(params['oatsFilter']){
         this.filterProduct('filterByOats','oats');
       }
       else if(params['milkFilter']){
