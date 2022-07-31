@@ -73,8 +73,8 @@ export class HttpService {
   }
 
 
-  sendShoppingList(email: string, prodUrl: string){
-
+  sendShoppingList(email: any, shoplist: any){
+    this.http.post(env.POST_URL+email, shoplist).subscribe();
   }
 
   /*getProducts(): Observable<APIResponse<Product>>{
@@ -83,6 +83,5 @@ export class HttpService {
       params:params
     });
   }*/
-
 
 }

@@ -10,7 +10,7 @@
             <ng-container class="conjunctive" *ngFor="let productsContainer of prodData ">                    
                 <div class="productsContainer" *ngIf="productsContainer.pickNPay !null">
                     <div class="product-item-details">
-                        <a class="product-name" href="{{productsContainer.pickNPay.url}}" >{{productsContainer.product.prodTitle}}</a>
+                        <a class="product-name" href="{{productsContainer.pickNPay.url}}" >{{productsContainer.product.prodTitle}} {{productsContainer.product.prodVolume}}{{productsContainer.product.prodVolumeUnit}}</a>
                         <h6 class="pVTtag" *ngIf="productsContainer.pickNPay.vitality !false " >Vitality</h6> 
                     </div>
                     <div class="product-item-price">
@@ -22,7 +22,7 @@
                 </div>  
                 <div class="productsContainer" *ngIf="productsContainer.woolworths !null">
                     <div class="product-item-details">
-                        <a class="product-name" href="{{productsContainer.woolworths.url}}" >{{productsContainer.product.prodTitle}}</a>
+                        <a class="product-name" href="{{productsContainer.woolworths.url}}" >{{productsContainer.product.prodTitle}} {{productsContainer.product.prodVolume}}{{productsContainer.product.prodVolumeUnit}}</a>
                         <h6 class="wVTtag" *ngIf="productsContainer.woolworths.vitality !false " >Vitality</h6> 
                     </div>
                     <div class="product-item-price">

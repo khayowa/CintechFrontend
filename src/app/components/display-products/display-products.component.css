@@ -6,6 +6,7 @@
 }
 
 
+
 @media (min-width: 1000px){
     .products-listing-container{
         flex-wrap: wrap;
@@ -55,7 +56,7 @@ h6{
 }*/
 
 .product-container-heading{
-    background-color: var(--clr-light);
+    background-color: transparent;
     display: flex;
     justify-content: center;
     justify-content: space-between; 
@@ -64,6 +65,7 @@ h6{
     padding-top: 5px; 
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    color: black;
     
 }
 

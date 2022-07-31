@@ -4,7 +4,7 @@ import { Component, Inject, Input, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AddToListService } from 'src/app/services/add-to-list.service';
 import { displayList } from 'src/app/models/displayList';
-import { NgModel } from '@angular/forms';
+import { NgModel, NgForm } from '@angular/forms';
 import { HttpService } from 'src/app/services/http.service';
 
 
@@ -18,6 +18,7 @@ export class DisplayListComponent implements OnInit {
   clickEventSubscription!: Subscription;
   displaylist!: displayList[];
   shoppingList!: shoppingList[];
+  email!: string;
 
   @Input() prodName! : any;
   @Input() prodPrice! : any;
@@ -26,7 +27,7 @@ export class DisplayListComponent implements OnInit {
 
   closeResult!: string;
 
-  constructor(private addToListService: AddToListService) {
+  constructor(private addToListService: AddToListService , private httpService: HttpService) {
     this.clickEventSubscription = this.addToListService.getClickEvent().subscribe(() => {
       this.appendListItem();
     })
@@ -35,18 +36,7 @@ export class DisplayListComponent implements OnInit {
 
   ngOnInit(): void {
  
-    this.displaylist = [
-      { 
-        name: 'Jungle Oats 200g',
-        price: 'R39.99',
-        store: 'Woolworths'
-      },
-      {
-        name: 'Full Cream Milk 6 x 1L',
-        price: 'R79.99',
-        store: 'Pick n Pay'
-      }
-    ]
+    this.displaylist = []
     this.shoppingList = []
 
   }
@@ -67,7 +57,19 @@ export class DisplayListComponent implements OnInit {
       url : this.prodUrl
     })
 
-    console.log(this.prodUrl);
+  }
+
+  requestSL(form: NgForm){
+    if(this.shoppingList.length == 0){
+      alert("List is empty. Add items into list")
+    }
+    else
+    {
+      this.email = form.value.requestList;
+      this.httpService.sendShoppingList(this.email, this.shoppingList);
+      console.log(this.email);
+      console.log(this.shoppingList);
+    }
   }
 
 

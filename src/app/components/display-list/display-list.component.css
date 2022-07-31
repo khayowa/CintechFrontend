@@ -36,7 +36,7 @@
     }
 
     .active-details{
-        margin-right: 8.5em;
+        margin-right: 0em;
         padding-left: -2.5px;
         position: absolute;
         left: 2.5em;
@@ -47,13 +47,14 @@
            
     }
     .active-store{
-        margin-right: -26em;
+        margin-right: -24em;
         position: absolute;
     }
     button{
         margin-right: -53em;
         position: absolute;
         border-radius: 5px;
+        margin-bottom: -2px;
         
     }
 
@@ -161,6 +162,7 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 input[type=text]{
@@ -171,11 +173,17 @@ input[type=text]{
     outline: none;
     padding: 8px;
     box-sizing: border-box;
+    position: absolute;
+}
+
+.btn-request{
+    margin-top: 1.8em;
+
 }
 
 .request-request{
     margin: .5em;
-    margin-left: 4em;
+    margin-left: -3em;
     font-size: small;
     padding: 4px;
     border: 1px solid transparent;
@@ -184,6 +192,7 @@ input[type=text]{
     box-shadow: var(--bs);
     transition: transform 100ms ease-in-out;
     transition: boder 0.5s;
+    position: absolute;
 }
 
 .request-request:hover{

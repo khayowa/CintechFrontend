@@ -1,11 +1,21 @@
 .title-label-logo{
     font-family: var(--ff-secondary);
     font-size: var(--fs-h1);
-    margin-top: 0.5em;
+    margin-top: 0.01em;
     margin-bottom: 1em;
+    border-top: 2px solid #222;
+    border-top-width: 100%;
+    width: 100%;
+    border-left: 2px solid #222;
+    border-right: 2px solid #222;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    
 }
 
 .title-title{
+    margin-top: 0.5em;
+    display: flex;
     justify-content: center;
     font-size: var(--fs-h1);       
 }

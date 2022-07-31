@@ -34,25 +34,26 @@
     }
 
     .item-details{
-        margin-left: 1.5em;
+        margin-left: -2.6em;
         position: absolute;
-        left: 2.5em;
+        left: 3em;
     }
     
     .item-price{
-        margin-left: 20em;
+        margin-left: 14.5em;
         position: absolute;
     }
     
     .item-store{
-        margin-left: 31.5em;
+        margin-left: 27em;
         position: absolute;
     }
     
     .btn-add{
-        margin-right: -600px;
+        margin-right: -625px;
         position: absolute;
         border-radius: 5px;
+        margin-top: -2.3px;
     }
 
 

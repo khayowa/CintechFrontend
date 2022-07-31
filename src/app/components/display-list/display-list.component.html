@@ -23,12 +23,12 @@
     <div class="active-request">
         <div class="request-wrap">
             <div class="active-request-container">
-                <form>
-                    <input type="text"  name="requestList"  placeholder="Enter email:">
+                <form  #form="ngForm" (ngSubmit)="requestSL(form)">
+                    <input type="text"  name="requestList" ngModel placeholder="Enter email:">
+                    <div class="btn-request">
+                        <button class="request-request" >Request List</button>
+                    </div>
                 </form>
-                <div class="btn-request">
-                    <button class="request-request" >Request List</button>
-                </div>
             </div>
         </div>
     </div>

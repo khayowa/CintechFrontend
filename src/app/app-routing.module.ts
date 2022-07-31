@@ -34,7 +34,7 @@ const routes: Routes = [
     component: DisplayProductsComponent, outlet: 'outputDisplay'
   },
   {
-    path: 'filterByEggs/:eggFilter',
+    path: 'filterByOats/:oatsFilter',
     component: DisplayProductsComponent, outlet: 'outputDisplay'
   },
   {

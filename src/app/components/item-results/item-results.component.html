@@ -3,7 +3,7 @@
         <ng-container *ngFor="let itemContainer of itemProducts">
             <div class="itemContainer" >
                 <div class="item-details">
-                    <a class="itemname" #nameP href="#" >{{itemContainer.product.prodTitle}}</a>
+                    <a class="itemname" #nameP href="#" >{{itemContainer.product.prodTitle}} {{itemContainer.product.prodVolume}}{{itemContainer.product.prodVolumeUnit}}</a>
                 </div>
                 <div class="item-price">
                     <span class="itemprice" #priceP >R {{itemContainer.pickNPay.price}}</span>
@@ -15,7 +15,7 @@
             </div>
             <div class="itemContainer" >
                 <div class="item-details">
-                    <a class="itemname" #nameW href="#" >{{itemContainer.product.prodTitle}}</a>
+                    <a class="itemname" #nameW href="#" >{{itemContainer.product.prodTitle}} {{itemContainer.product.prodVolume}}{{itemContainer.product.prodVolumeUnit}}</a>
                 </div>
                 <div class="item-price">
                     <span class="itemprice" #priceW >R {{itemContainer.woolworths.price}}</span>

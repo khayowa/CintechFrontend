@@ -17,18 +17,7 @@ export class DisplayProductsComponent implements OnInit {
   constructor(private httpService: HttpService, private activatedRoute: ActivatedRoute, private lookupService: LookUpService) { }
   
 
-  getBulk(){
-    this.httpService.getProduct().subscribe(data => {
-      console.warn(data);
-      this.prodData = data;
-    })
-  }
-
-  lookUP(){
-
-  }
- 
-
+  
   ngOnInit(): void {
     this.lookupService.looksubj$.subscribe(lookup => {
       this.httpService.getBySearch(lookup).subscribe(data => {
@@ -37,7 +26,7 @@ export class DisplayProductsComponent implements OnInit {
       //this.activatedRoute.params.subscribe((params: Params) => {
       // params['product-search'] == lookup;
       //  this.searchProducts(params['product-search']);
-    //  })     
+      // })     
     });
 
     this.activatedRoute.params.subscribe((params: Params) => {
@@ -60,7 +49,7 @@ export class DisplayProductsComponent implements OnInit {
         this.filterProduct('filterByMaize','maize');
       }
       else if(params['eggFilter']){
-        this.filterProduct('filterByEggs','eggs');
+        this.filterProduct('filterByOats','oats');
       }
       else if(params['milkFilter']){
         this.filterProduct('filterByMilk','milk');
@@ -71,6 +60,13 @@ export class DisplayProductsComponent implements OnInit {
         })
       }
     });
+  }
+
+  getBulk(){
+    this.httpService.getProduct().subscribe(data => {
+      console.warn(data);
+      this.prodData = data;
+    })
   }
 
   filterProduct(directive: string,product?: string){
