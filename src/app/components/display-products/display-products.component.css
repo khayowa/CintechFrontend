@@ -36,6 +36,15 @@
 
 
 }
+
+h6{
+    margin-bottom: -2.5px;
+    color: rgb(212, 121, 9);
+    font-weight: var(--fw-bold);
+    
+}
+
+
 /*
 .products-listing-container{
     margin-top: 3em;

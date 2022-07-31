@@ -24,7 +24,8 @@
     width: 8%;
     min-width: 8%;
     height: 27px;
-    min-height: 27px;  
+    min-height: 27px;
+    border-radius: 5px;  
     background-color:gold; 
     border: 35px var(--clr-dark); 
     box-shadow: var(--bs); 
@@ -38,9 +39,6 @@
     transform: scale(1.1)
 }
 
-.product-listing-filter{
-    ;
-}
 
 h6{
     font-size: 10px;

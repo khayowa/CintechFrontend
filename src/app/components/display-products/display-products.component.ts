@@ -2,6 +2,7 @@ import { HttpService } from './../../services/http.service';
 import { Product, APIResponse } from './../../models/models';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { LookUpService } from 'src/app/services/look-up.service';
 
 @Component({
   selector: 'app-display-products',
@@ -13,7 +14,7 @@ export class DisplayProductsComponent implements OnInit {
   public products!: Array<Product>;
   prodData: any = [];
 
-  constructor(private httpService: HttpService, private activatedRoute: ActivatedRoute) { }
+  constructor(private httpService: HttpService, private activatedRoute: ActivatedRoute, private lookupService: LookUpService) { }
   
 
   getBulk(){
@@ -22,9 +23,23 @@ export class DisplayProductsComponent implements OnInit {
       this.prodData = data;
     })
   }
+
+  lookUP(){
+
+  }
  
 
   ngOnInit(): void {
+    this.lookupService.looksubj$.subscribe(lookup => {
+      this.httpService.getBySearch(lookup).subscribe(data => {
+        this.prodData = data;
+      })
+      //this.activatedRoute.params.subscribe((params: Params) => {
+      // params['product-search'] == lookup;
+      //  this.searchProducts(params['product-search']);
+    //  })     
+    });
+
     this.activatedRoute.params.subscribe((params: Params) => {
       if(params['product-search']){
         this.searchProducts(params['product-search']);

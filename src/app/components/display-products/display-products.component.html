@@ -1,34 +1,38 @@
 
 <section class="products">
-    <div class="products-listing-container">
-        <div class="product-container-heading">
-            <div class="product-name-heading"><h3 class="name">Product Name</h3></div>
-            <div class="product-price-heading"><h3 class="price">Price</h3></div>
-            <div class="product-store-heading"><h3 class="stroe">Store</h3></div>
+    <div class="products-listing-wrapper">
+        <div class="products-listing-container">
+            <div class="product-container-heading">
+                <div class="product-name-heading"><h3 class="name">Product Name</h3></div>
+                <div class="product-price-heading"><h3 class="price">Price</h3></div>
+                <div class="product-store-heading"><h3 class="stroe">Store</h3></div>
+            </div> 
+            <ng-container class="conjunctive" *ngFor="let productsContainer of prodData ">                    
+                <div class="productsContainer" *ngIf="productsContainer.pickNPay !null">
+                    <div class="product-item-details">
+                        <a class="product-name" href="{{productsContainer.pickNPay.url}}" >{{productsContainer.product.prodTitle}}</a>
+                        <h6 class="pVTtag" *ngIf="productsContainer.pickNPay.vitality !false " >Vitality</h6> 
+                    </div>
+                    <div class="product-item-price">
+                        <span class="product-price">R {{productsContainer.pickNPay.price}}</span>
+                    </div>
+                    <div class="product-item-store">
+                        <a class="product-store" href="{{productsContainer.pickNPay.url}}" >Pick n Pay </a>
+                    </div>
+                </div>  
+                <div class="productsContainer" *ngIf="productsContainer.woolworths !null">
+                    <div class="product-item-details">
+                        <a class="product-name" href="{{productsContainer.woolworths.url}}" >{{productsContainer.product.prodTitle}}</a>
+                        <h6 class="wVTtag" *ngIf="productsContainer.woolworths.vitality !false " >Vitality</h6> 
+                    </div>
+                    <div class="product-item-price">
+                        <span class="product-price">R {{productsContainer.woolworths.price}}</span>
+                    </div>
+                    <div class="product-item-store">
+                        <a class="product-store" href="{{productsContainer.woolworths.url}}" >Woolworths </a>
+                    </div>
+                </div>
+            </ng-container> 
         </div>
-        <ng-container *ngFor="let productsContainer of prodData ">
-        <div class="productsContainer" *ngIf="productsContainer.pickNPay !null">
-            <div class="product-item-details">
-                <a class="product-name" href="{{productsContainer.pickNPay.url}}" >{{productsContainer.product.prodTitle}}</a>
-            </div>
-            <div class="product-item-price">
-                <span class="product-price">R {{productsContainer.pickNPay.price}}</span>
-            </div>
-            <div class="product-item-store">
-                <a class="product-store" href="{{productsContainer.pickNPay.url}}" >Pick n Pay </a>
-            </div>
-        </div>
-        <div class="productsContainer" *ngIf="productsContainer.woolworths !null">
-            <div class="product-item-details">
-                <a class="product-name" href="{{productsContainer.woolworths.url}}" >{{productsContainer.product.prodTitle}}</a>
-            </div>
-            <div class="product-item-price">
-                <span class="product-price">R {{productsContainer.woolworths.price}}</span>
-            </div>
-            <div class="product-item-store">
-                <a class="product-store" href="{{productsContainer.woolworths.url}}" >Woolworths </a>
-            </div>
-        </div>
-        </ng-container>
     </div>
 </section>

@@ -22,11 +22,13 @@ export class ItemResultsComponent implements OnInit {
   prodName!:any;
   prodPrice!:any; 
   prodStore!:any;
+  prodUrl!:any;
 
-  transferData(name: any, price: any, store: any){
+  transferData(name: any, price: any, store: any, url: any){
     this.prodName = name
     this.prodPrice = price
     this.prodStore = store
+    this.prodUrl = url
 
    // console.log(name, price, store);
   }
@@ -44,7 +46,6 @@ export class ItemResultsComponent implements OnInit {
 
   addToList(){
     this.addToListService.sendClickEvent();
-    alert('Add button clicked')
   }
 
   searchItems(search?: string){

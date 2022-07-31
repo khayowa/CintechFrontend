@@ -16,12 +16,15 @@ export class HttpService {
   }
 
   getRandom(){
-    return this.http.get(env.RAND_URL);
+    let params = new HttpParams().set('','');
+    return this.http.get(env.RAND_URL, {
+      params:params
+    });
   }
 
   getWoolies(){
 
-    let params = new HttpParams().set('selectWool','')
+    let params = new HttpParams().set('selectWool','');
     return this.http.get(env.woolP_URL, {
       params:params
     });
@@ -61,17 +64,18 @@ export class HttpService {
   }
 
   getBySearch(search?: string){
-    let params = new HttpParams();
+    //let params = new HttpParams();
 
-    if(search){
-      params = new HttpParams().set('search', search)
-    }
-
-    return this.http.get(env.SEARCH_URL+search, {
-      params:params
-    });
+   // if(search){
+   //   params = new HttpParams().set('(outputDisplay:search/', search)
+   // }
+    return this.http.get(env.SEARCH_URL+search);
   }
 
+
+  sendShoppingList(email: string, prodUrl: string){
+
+  }
 
   /*getProducts(): Observable<APIResponse<Product>>{
     let params = new HttpParams();
@@ -80,29 +84,5 @@ export class HttpService {
     });
   }*/
 
-  getProductList(ordering: string, search?: string): Observable<APIResponse<Product>>{
-    let params = new HttpParams().set('ordering', ordering);
-
-    if(search){
-      params = new HttpParams().set('ordering', ordering).set('search', search);
-    }
-
-    return this.http.get<APIResponse<Product>>(`${env.BASE_URL}/products`, {
-      params:params
-    });
-
-  }
-
-  getItemList(listsearch?: string): Observable<APIResponse<Product>>{
-    let params = new HttpParams();
-
-    if(listsearch){
-      params = new HttpParams().set('listSearch', listsearch);
-    }
-
-    return this.http.get<APIResponse<Product>>(`${env.BASE_URL}/items`, {
-      params : params
-    });
-  }
 
 }

@@ -53,6 +53,7 @@
     button{
         margin-right: -53em;
         position: absolute;
+        border-radius: 5px;
         
     }
 
@@ -146,6 +147,56 @@
     
 }
 
+form{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.request-wrap{
+   width: 100%;
+}
+
+.active-request-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type=text]{
+    min-width: 25%;
+    height: 28px;
+    border: 1px solid #aaa;
+    border-radius: 6.5px;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.request-request{
+    margin: .5em;
+    margin-left: 4em;
+    font-size: small;
+    padding: 4px;
+    border: 1px solid transparent;
+    background-color: gold;
+    text-decoration-color: var(--clr-dark);
+    box-shadow: var(--bs);
+    transition: transform 100ms ease-in-out;
+    transition: boder 0.5s;
+}
+
+.request-request:hover{
+    border: 0.5px solid black;
+    transform: scale(1.1);
+}
+
+.active-request{
+    margin-top: 2.5em;
+    display: flex;
+    justify-content: center;
+    
+}
 
 
 /*

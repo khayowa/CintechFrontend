@@ -18,5 +18,4 @@ export class MakeListComponent implements OnInit {
     this.router.navigate(['titleSearch', form.value.titleSearch])
   }
 
-
 }

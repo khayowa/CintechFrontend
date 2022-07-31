@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LookUpService } from 'src/app/services/look-up.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -9,13 +10,15 @@ import { Router } from '@angular/router';
 })
 export class SearchBarComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private lookupService: LookUpService) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(form: NgForm){
-    this.router.navigate(["(outputDisplay:search/",form.value.search,")"])
+    this.router.navigate([])
+
+    this.lookupService.sendLookEvent(form.value.search);
 
   }
 

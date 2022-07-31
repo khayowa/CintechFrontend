@@ -1,8 +1,12 @@
+import { HttpClient } from '@angular/common/http';
+import { shoppingList } from './../../models/shoppingList';
 import { Component, Inject, Input, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AddToListService } from 'src/app/services/add-to-list.service';
 import { displayList } from 'src/app/models/displayList';
 import { NgModel } from '@angular/forms';
+import { HttpService } from 'src/app/services/http.service';
+
 
 
 @Component({
@@ -13,16 +17,14 @@ import { NgModel } from '@angular/forms';
 export class DisplayListComponent implements OnInit {
   clickEventSubscription!: Subscription;
   displaylist!: displayList[];
+  shoppingList!: shoppingList[];
 
-  //pName! : any;
-  //pPrice! : any;
-  //pStore! : any;
-  
   @Input() prodName! : any;
   @Input() prodPrice! : any;
   @Input() prodStore! : any;
+  @Input() prodUrl! : any;
 
-  
+  closeResult!: string;
 
   constructor(private addToListService: AddToListService) {
     this.clickEventSubscription = this.addToListService.getClickEvent().subscribe(() => {
@@ -32,10 +34,7 @@ export class DisplayListComponent implements OnInit {
 
 
   ngOnInit(): void {
-  /*  this.clickEventSubscription = this.addToListService.getClickEvent().subscribe(() => {
-      this.appendListItem();
-    }) */
-
+ 
     this.displaylist = [
       { 
         name: 'Jungle Oats 200g',
@@ -48,11 +47,13 @@ export class DisplayListComponent implements OnInit {
         store: 'Pick n Pay'
       }
     ]
+    this.shoppingList = []
 
   }
 
   removeItem(id:number){
     this.displaylist = this.displaylist.filter((v, i) => i !== id);
+    this.shoppingList = this.shoppingList.filter((v, i) => i !== id);
   }
 
   appendListItem(){
@@ -62,6 +63,12 @@ export class DisplayListComponent implements OnInit {
       store : this.prodStore
     })
 
-    console.log('function call from another component works ');
+    this.shoppingList.push({
+      url : this.prodUrl
+    })
+
+    console.log(this.prodUrl);
   }
+
+
 }

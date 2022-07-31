@@ -23,6 +23,7 @@ import { HttpErrorsInterceptor } from './interceptors/http-errors.interceptor';
 import { FooterComponent } from './components/footer/footer.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,8 +45,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MatFormFieldModule,
     MatSelectModule,
     MatTabsModule,
-    MatIconModule,
-    
+    MatIconModule 
   ],
   providers: [
     {
